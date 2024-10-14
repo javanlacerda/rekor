@@ -51,14 +51,14 @@ jobs:
 
       - uses: ko-build/setup-ko@3aebd0597dc1e9d1a26bcfdb7cbeb19c131d3037 # v0.7
 
-      - name: Set up Cloud SDK
-        uses: google-github-actions/auth@8254fb75a33b976a221574d287e93919e6a36f70 # v2.1.6
-        with:
-          workload_identity_provider: 'projects/498091336538/locations/global/workloadIdentityPools/githubactions/providers/sigstore-rekor'
-          service_account: 'github-actions-rekor@projectsigstore.iam.gserviceaccount.com'
+      # - name: Set up Cloud SDK
+      #   uses: google-github-actions/auth@8254fb75a33b976a221574d287e93919e6a36f70 # v2.1.6
+      #   with:
+      #     workload_identity_provider: 'projects/498091336538/locations/global/workloadIdentityPools/githubactions/providers/sigstore-rekor'
+      #     service_account: 'github-actions-rekor@projectsigstore.iam.gserviceaccount.com'
 
-      - name: creds
-        run: gcloud auth configure-docker --quiet
+      # - name: creds
+      #   run: gcloud auth configure-docker --quiet
         
       - name: Formatted labels
         id: labels
